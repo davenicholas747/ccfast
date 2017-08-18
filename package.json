@@ -1,6 +1,6 @@
 {
     "name": "cc_bitcoincli",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "CLI interface for Bitcoin-CLI",
     "main": "./index.js",
     "author": "Dave Nicholas",
@@ -10,13 +10,13 @@
     },
     "binary": {
         "module_name": "cc_bitcoincli",
-        "module_path": "./build/Release/",
+        "module_path": "build/Release/",
         "remote_path": "{version}",
         "package_name": "{module_name}-v{version}.tar.gz",
         "host": "https://github.com/davenicholas747/ccfast/releases/download/"
     },
     "scripts": {
-        "install": "node-pre-gyp install --fallback-to-build",
+        "install": "node-pre-gyp install",
         "clean": "rm -rf node_modules lib/binding build",
         "test": "node index.js",
         "prepublish": "npm ls"
