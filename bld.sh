@@ -12,4 +12,10 @@ echo "cc: Run smoke test on addon...."
 
 node index.js
 
-echo "cc Done."
+echo "CC Done!"
+
+
+
+
+
+
