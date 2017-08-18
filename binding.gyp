@@ -5,7 +5,7 @@
         "<!(node -e \"require('nan')\")"
       ],
 
-      "target_name": "bitcoincli",
+      "target_name": "cc_bitcoincli",
 
       "sources": [ "src/cliclient.cpp", "../../../../bitcoin/src/cliboilerplateforaddon.cpp"],
    
