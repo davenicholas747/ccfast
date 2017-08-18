@@ -13,10 +13,11 @@
         "module_path": "./build/Release/",
         "remote_path": "{version}",
         "package_name": "{module_name}-v{version}.tar.gz",
-        "host": "https://github.com/davenicholas747/ccfast.git/releases/download/"
+        "host": "https://github.com/davenicholas747/ccfast/releases/download/"
     },
     "scripts": {
         "install": "node-pre-gyp install --fallback-to-build",
+        "clean": "rm -rf node_modules lib/binding build",
         "test": "node index.js",
         "prepublish": "npm ls"
     },
