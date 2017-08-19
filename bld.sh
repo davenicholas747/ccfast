@@ -1,9 +1,9 @@
 echo "CC: Clearing out old build relics..."
 node-gyp clean
 node-pre-gyp clean
-
 rm -rf build
 rm -rf node_modules
+rm -rf /home/dave/node_modules/cc_bitcoincli
 
 npm -l install node-pre-gyp-github
 
@@ -16,16 +16,18 @@ echo ""
 echo "Testing package..."
 
 #node-pre-gyp testpackage
+export NODE_PRE_GYP_GITHUB_TOKEN=5e18930060f56e93fbf26496fbf6abf27fe6dac4
 
-#node-pre-gyp-github publish
-#export NODE_PRE_GYP_GITHUB_TOKEN=192387be34b4ce3d39ffc42769b172ccd27b923a
-
+echo ""
+echo ""
+echo ""
+echo "Running node-pre-gyp-github publish now ...."
 node-pre-gyp-github publish --release
 
-echo "cc: Run smoke test on addon...."
+#node-pre-gyp publish
 
+echo "cc: Run manual smoke test on addon...."
 node index.js
-
 echo "CC Done!"
 
 
